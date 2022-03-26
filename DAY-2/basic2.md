@@ -1,5 +1,5 @@
 # SQL practice
-## ORDER BY - LIMIT, OFFSET - GROUP BY - HAVING
+## ORDER BY - LIMIT, OFFSET 
 - ### film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
  ```sql
 SELECT * FROM film WHERE title LIKE '%n' ORDER BY length DESC LIMIT 5;
@@ -28,6 +28,7 @@ SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 ```sql
 SELECT COUNT(DISTINCT replacement_cost) FROM film WHERE length > 150;
 ```
+## GROUP BY - HAVING
 - ### film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
 ```sql
 SELECT rating,COUNT(*) FROM film GROUP BY rating;
